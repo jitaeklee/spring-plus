@@ -19,8 +19,7 @@ public class TodoQueryRepositoryImpl implements TodoQueryRepository {
         return queryFactory
                 .select(todo)
                 .from(todo)
-                .where(
-                        todo.id.eq(todoId)
-                ).fetchOne();
+                .where(todo.id.eq(todoId))
+                .fetchOne();
     }
 }
